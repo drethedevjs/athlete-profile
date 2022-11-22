@@ -1,18 +1,11 @@
 (function() {
 
-  const homeController = function($scope) {
-    $scope.title = "Home";
-    $scope.name = "Home";
-    $scope.message = "Mouse Over these images to see a directive at work";
+  const homeController = function($scope, profilesFactory) {
+    function init() {
+      $scope.profiles = profilesFactory.getProfiles();
+    }
 
-    var onLogoutSuccess = function(response) {
-      $location.path('/login');
-    };
-
-    $scope.logout = function() {
-      AuthenticationService.logout().success(onLogoutSuccess);
-    };
-
+    init();
   };
 
   angular.module("app").controller('HomeController', homeController);

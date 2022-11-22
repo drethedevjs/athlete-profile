@@ -3,9 +3,7 @@ Athlete Profile Input Form
 
 ### Overview
 
-In this task you'll be creating and deploying a simple, full-stack, responsive, single-page application in Node and Angular 1/ AngularJS (NOT Angular2+) or ReactJS. 
-
-> If you have any questions email me at ron@opensponsorship.com.
+In this task you'll be creating and deploying a simple, full-stack, responsive, single-page application in Node and Angular 1/ AngularJS.
 
 ### Requirements
 
@@ -95,14 +93,6 @@ Please note:
 
 * This is a **single-page application**. There shouldn't be page reloads between screens.
 
-### Time limits
-
-Please spend **no more than 5-hours** on this test. If you can't make it perfect in that time, don't worry, just send me what you've accomplished. This time does not necessarily start when you receive this test, we only ask that you put aside some time to dedicate to completing the challenge.
-
-Please turn in your results within **72-hours** of the prompt being given. If that falls during the weekend, then please turn it in by Monday.
-
-> Extensions are available, just ask!
-
 ### Evaluation & priorities
 
 Within your brief **5 hour time limit** I hope you'll prioritize the following, in this order. Consider this an iterative process � get it working on sound principles first, then refine and polish as time allows.
@@ -130,13 +120,3 @@ Less important details:
 * Email me the repository URL and application URL
 
 > If for some reason you would rather not have your code or application out in the open, please send me a zip file of the source code and instructions on to launch and view the finished application.
-
-### Wrap up
-
-When you've finished the test let me know by email: ishveen@opensponsorship.com
-
-We will then schedule a short wrap up call to go over your results and the thinking you applied to this project.
-
-### Hints
-
-* Be efficient! Please don�t reinvent the wheel, use [generators]and other tools when they speed up your process and get you to your end goal faster.

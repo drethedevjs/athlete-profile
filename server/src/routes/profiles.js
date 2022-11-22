@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const router = express.Router();
 const Profile = require('../models/profileSchema');
 
@@ -30,7 +29,7 @@ router.post('/', async (req, res) => {
     gender: req.body.gender,
     dateOfBirth: req.body.dateOfBirth,
   });
-  
+
   try {
     await profile.save();
     res.status(201).json(profile);

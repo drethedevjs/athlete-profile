@@ -1,22 +1,15 @@
 {
-  "name": "lineman-angular-template",
-  "title": "An HTML/JS/CSS app using Angular.JS",
+  "name": "Athlete-Profile-Form",
+  "title": "Front end for code challenge",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "author": {
-    "name": "John Doe",
-    "company": "ACME, Inc."
+    "name": "Andre Thomas"
   },
   "devDependencies": {
-    "coffee-script": "^1.6.3",
-    "jasmine-given": "^2.6.2",
-    "lineman": "^0.34.0",
-    "lineman-angular": "^0.3.0",
-    "lineman-less": "0.0.1",
     "protractor": "^1.4.0"
   },
   "scripts": {
-    "start": "lineman run",
-    "test": "lineman spec-ci"
+    "start": "npm start"
   }
 }
