@@ -1,6 +1,6 @@
 angular.module("app").config(function($routeProvider, $locationProvider) {
 
-  $locationProvider.html5Mode({enabled:true});
+  // $locationProvider.html5Mode({enabled:true});
 
   $routeProvider.when('/login', {
     templateUrl: 'login.html',
@@ -8,7 +8,7 @@ angular.module("app").config(function($routeProvider, $locationProvider) {
   });
 
   $routeProvider.when('/home', {
-    templateUrl: 'home.html',
+    templateUrl: '../templates/home.html',
     controller: 'HomeController'
   });
 
@@ -27,6 +27,6 @@ angular.module("app").config(function($routeProvider, $locationProvider) {
     }
   });
 
-  $routeProvider.otherwise({ redirectTo: '/login' });
+  $routeProvider.otherwise({ redirectTo: '/home' });
 
 });
