@@ -1,0 +1,30 @@
+{
+  "name": "Athlete Profile Form",
+  "version": "1.0.0",
+  "description": "Open Sponsorship Code Challenge",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js --exec babel-node -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drethedevjs/athlete-profile.git"
+  },
+  "author": "Andre Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drethedevjs/athlete-profile/issues"
+  },
+  "homepage": "https://github.com/drethedevjs/athlete-profile#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^3.7.3",
+    "mongoose": "^5.13.15",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
