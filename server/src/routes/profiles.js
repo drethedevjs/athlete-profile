@@ -3,6 +3,7 @@ const router = express.Router();
 const Profile = require('../models/profileSchema');
 
 router.get('/', async (req, res) => {
+  setResponseHeader(res);
   try {
     const profiles = await Profile.find();
     res.json(profiles);
@@ -12,6 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
+  setResponseHeader(res);
   Profile.find({name: req.params.name}, (err, profile) => {
     if(err) {
       res.send(err);
@@ -23,11 +25,18 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+  setResponseHeader(res);
   const profile = new Profile({
-    name: req.body.name,
-    sport: req.body.sport,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    sports: req.body.sports,
     gender: req.body.gender,
     dateOfBirth: req.body.dateOfBirth,
+    team: req.body.team,
+    about: req.body.about,
+    interests: req.body.interests,
+    profileImage: req.body.profileImage,
+    location: req.body.location,
   });
 
   try {
@@ -37,5 +46,42 @@ router.post('/', async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 })
+
+router.put('/', async (req, res) => {
+  setResponseHeader(res);
+  const profile = new Profile({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    sports: req.body.sports,
+    gender: req.body.gender,
+    dateOfBirth: req.body.dateOfBirth,
+    team: req.body.team,
+    about: req.body.about,
+    interests: req.body.interests,
+    profileImage: req.body.profileImage,
+    location: req.body.location,
+  });
+
+  try {
+    await Profile.updateOne({ id: req.body.id }, profile);
+    // await Profile.save();
+    res.status(201).json(profile);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+})
+
+router.delete('/remove/:id', async (req, res) => {
+  setResponseHeader(res);
+
+  try {
+    var y = await Profile.findOneAndDelete(req.params.id);
+    res.status(200);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+})
+
+const setResponseHeader = (res) => res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5555');
 
 module.exports = router;

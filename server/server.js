@@ -2,16 +2,15 @@ const profileRouter = require('./src/routes/profiles');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dbConfig = require('./config');
 
 const app = express();
 const PORT = 2222;
 
-const uri = 'mongodb+srv://sa:<password>@athlete-profile-cluster.msgfrq8.mongodb.net/?retryWrites=true&w=majority';
-
 async function connect() {
   try
   {
-    await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(dbConfig["connectionString"], { useNewUrlParser: true, useUnifiedTopology: true });
     console.log("Connected to database!");
   } catch (error) {
     console.log(error);
@@ -20,8 +19,17 @@ async function connect() {
 
 connect();
 app.use(express.json());
-app.use(cors);
+
 app.use('/profile', profileRouter);
+
+const corsOptions = {
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}
+
+app.use(cors(corsOptions));
 
 // Allows you to verify via the browser that the server is up and running
 app.get('/', (req, res) =>

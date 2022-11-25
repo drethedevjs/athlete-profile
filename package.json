@@ -1,5 +1,5 @@
 {
-  "name": "Athlete-Profile-Form",
+  "name": "Athlete Profile Form",
   "title": "Front end for code challenge",
   "version": "0.0.1",
   "private": false,
@@ -11,5 +11,12 @@
   },
   "scripts": {
     "start": "npm start"
+  },
+  "dependencies": {
+    "angular-momentjs": "^0.2.2",
+    "bootstrap": "^5.2.3",
+    "cryptiles": "^4.1.3",
+    "live-server": "^1.2.2",
+    "moment": "^2.29.4"
   }
 }

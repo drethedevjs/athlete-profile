@@ -2,7 +2,9 @@
 
   const homeController = function($scope, profilesFactory) {
     function init() {
-      $scope.profiles = profilesFactory.getProfiles();
+      profilesFactory.getProfiles().then(profiles => {
+        $scope.profiles = profiles;
+      });
     }
 
     init();

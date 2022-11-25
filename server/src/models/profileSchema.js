@@ -3,12 +3,16 @@ const Schema = mongoose.Schema;
 
 // Creating db schema that defines how the data should look
 const ProfileSchema = new Schema({
-  name:{
+  firstName:{
     type: String,
     required: true
   },
-  sport: {
+  lastName:{
     type: String,
+    required: true
+  },
+  sports: {
+    type: Array,
     required: true
   },
   gender: {
@@ -19,6 +23,27 @@ const ProfileSchema = new Schema({
     type: Date,
     required: true,
     default: Date.now
+  },
+  location: {
+    type: String,
+    required: true,
+    default: 'USA'
+  },
+  team: {
+    type: String,
+    required: true,
+  },
+  about: {
+    type: String,
+    required: false,
+  },
+  interests: {
+    type: Array,
+    required: false
+  },
+  profileImage: {
+    type: String,
+    required: false
   }
 })
 
