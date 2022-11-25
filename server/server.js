@@ -37,6 +37,6 @@ app.get('/', (req, res) =>
 );
 
 // Allows you to verify via the console that the server is up and running
-app.listen(PORT, () =>
+app.listen(process.env.PORT || PORT, () =>
   console.log(`Server running on port ${PORT}`)
 );

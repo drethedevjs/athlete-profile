@@ -14,9 +14,9 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', (req, res) => {
   setResponseHeader(res);
-  Profile.find({name: req.params.name}, (err, profile) => {
+  Profile.find({_id: req.params.id}, (err, profile) => {
     if(err) {
-      res.send(err);
+      res.send(err.message);
     }
 
     // Adding the retrieved information from the db to the json object being returned
