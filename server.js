@@ -6,7 +6,7 @@ const dbConfig = require('./config');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 2222;
+
 
 async function connect() {
   try
@@ -49,4 +49,5 @@ app.use("/*", function(req, res) {
 // });
 
 // Allows you to verify via the console that the server is up and running
+const PORT = process.env.PORT || 2222;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
