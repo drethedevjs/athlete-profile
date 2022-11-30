@@ -5,6 +5,11 @@ angular.module("app").config(function($routeProvider) {
     controller: 'HomeController'
   });
 
+  $routeProvider.when('/', {
+    templateUrl: '../templates/home.html',
+    controller: 'HomeController'
+  });
+
   $routeProvider.when('/form-basic', {
     templateUrl: '../templates/formPages/formBasicInfo.html',
     controller: 'FormController'
@@ -25,6 +30,6 @@ angular.module("app").config(function($routeProvider) {
     controller: 'FormController'
   });
 
-  $routeProvider.otherwise({ redirectTo: '/' });
+  $routeProvider.otherwise({ redirectTo: '/home' });
 
 });

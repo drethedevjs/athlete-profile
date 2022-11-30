@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dbConfig = require('./config');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 2222;
@@ -31,8 +32,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-var x = express.static('app');
-app.use(x);
+app.use(express.static('app'));
+app.use("/*", function(req, res) {
+  res.sendFile(path.join(__dirname + '/app/pages/index.html'));
+});
 // Allows you to verify via the browser that the server is up and running
 // app.get('/', (req, res) =>
 //   res.send(`Node and express server running on port ${PORT}`)
