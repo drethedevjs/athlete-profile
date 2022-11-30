@@ -7,7 +7,6 @@ const path = require('path');
 
 const app = express();
 
-
 async function connect() {
   try
   {
