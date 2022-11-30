@@ -1,10 +1,5 @@
 angular.module("app").config(function($routeProvider) {
 
-  $routeProvider.when('/home', {
-    templateUrl: '../templates/home.html',
-    controller: 'HomeController'
-  });
-
   $routeProvider.when('/', {
     templateUrl: '../templates/home.html',
     controller: 'HomeController'
@@ -30,6 +25,6 @@ angular.module("app").config(function($routeProvider) {
     controller: 'FormController'
   });
 
-  $routeProvider.otherwise({ redirectTo: '/home' });
+  // $routeProvider.otherwise({ redirectTo: '/home' });
 
 });
