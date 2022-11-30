@@ -4,7 +4,7 @@
 server/node_modules
 node_modules
 package-lock.json
-server/config.js
+config.js
 
 /dist
 /generated
