@@ -18,8 +18,8 @@ async function connect() {
 }
 
 connect();
-app.use(express.json());
 
+app.use(express.json());
 app.use('/profile', profileRouter);
 
 const corsOptions = {
@@ -32,7 +32,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.static(path.join(__dirname + '/app')));
-app.use("/*", function(req, res) {
+app.use("/", function(req, res) {
   res.sendFile(path.join(__dirname + '/app/pages/index.html'));
 });
 

@@ -6,17 +6,17 @@ angular.module("app").config(function($routeProvider) {
   });
 
   $routeProvider.when('/form-basic', {
-    templateUrl: '../templates/formPages/formBasicInfo.html',
+    templateUrl: '../templates/formBasicInfo.html',
     controller: 'FormController'
   });
 
   $routeProvider.when('/form-about', {
-    templateUrl: '../templates/formPages/formAbout.html',
+    templateUrl: '../templates/formAbout.html',
     controller: 'FormController'
   });
 
   $routeProvider.when('/form-summary', {
-    templateUrl: '../templates/formPages/formSummary.html',
+    templateUrl: '../templates/formSummary.html',
     controller: 'FormController'
   });
 
@@ -25,6 +25,6 @@ angular.module("app").config(function($routeProvider) {
     controller: 'FormController'
   });
 
-  // $routeProvider.otherwise({ redirectTo: '/home' });
+  $routeProvider.otherwise({ redirectTo: '/' });
 
 });
