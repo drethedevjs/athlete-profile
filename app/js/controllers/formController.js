@@ -1,6 +1,6 @@
 (function() {
 
-  const formController = function($scope, $routeParams, profilesFactory) {
+  const formController = function($scope, $routeParams, profilesFactory, $location) {
     if ($routeParams.id) {
       function init() {
         profilesFactory.getProfiles().then(athleteData => {
@@ -9,6 +9,8 @@
       }
       init();
     }
+
+    $scope.navigateTo = (route) => $location.path(`./${route}`);
 
     const formSubmit = () => {
       profilesFactory.updateProfile($scope.athleteData).then(() => {

@@ -1,13 +1,18 @@
 Athlete Profile Input Form
 ===============================
+## Heroku
+View Deployed App at [Athlete Profile App](https://athleteprofileapp.herokuapp.com/)
+
+## Up And Running on Your Machine
+* I haven't created a MongoDB db on Heroku just yet. I created a personal one. The `server.js` file references the connection string in a `config.js` file that isn't in this repo for security reasons. I can provide the necessary file upon request.
+* If running locally, you'll need to have your IP Address recognized by the db before creating profiles.
 
 ### Overview
-
 In this task you'll be creating and deploying a simple, full-stack, responsive, single-page application in Node and Angular 1/ AngularJS.
 
 ### Requirements
 
-I would like you to create a **multi-step** or **multi-screen** athlete profile form that gathers standard demographic, sports and event data. Here is a list of data points and sports you might want to use:
+Create a **multi-step** or **multi-screen** athlete profile form that gathers standard demographic, sports and event data. Here is a list of data points and sports you might want to use:
 
 #### Data Points
 
