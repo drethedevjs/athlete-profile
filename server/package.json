@@ -1,5 +1,5 @@
 {
-  "name": "Athlete Profile Form",
+  "name": "athleteprofileform",
   "version": "1.0.0",
   "description": "Open Sponsorship Code Challenge",
   "main": "server.js",
@@ -27,5 +27,8 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1"
+  },
+  "engines": {
+    "node": "16.17.0"
   }
 }

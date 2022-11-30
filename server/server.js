@@ -5,7 +5,7 @@ const cors = require('cors');
 const dbConfig = require('./config');
 
 const app = express();
-const PORT = 2222;
+const PORT = process.env.PORT || 2222;
 
 async function connect() {
   try
@@ -32,11 +32,18 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Allows you to verify via the browser that the server is up and running
-app.get('/', (req, res) =>
-  res.send(`Node and express server running on port ${PORT}`)
-);
+// app.get('/', (req, res) =>
+//   res.send(`Node and express server running on port ${PORT}`)
+// );
+
+// app.get('/', function (req, res, next) {
+//   // res.send('/');
+//   res.render('/home');
+// }, res => {
+//   console.log(res);
+// });
 
 // Allows you to verify via the console that the server is up and running
-app.listen(process.env.PORT || PORT, () =>
+app.listen(PORT, () =>
   console.log(`Server running on port ${PORT}`)
 );
