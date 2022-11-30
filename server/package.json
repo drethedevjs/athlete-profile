@@ -1,6 +1,7 @@
 {
   "name": "athleteprofileform",
-  "version": "1.0.0",
+  "title": "Athlete Profile Form",
+  "version": "0.0.1",
   "description": "Open Sponsorship Code Challenge",
   "main": "server.js",
   "scripts": {

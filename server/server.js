@@ -31,6 +31,8 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+var x = express.static('app');
+app.use(x);
 // Allows you to verify via the browser that the server is up and running
 // app.get('/', (req, res) =>
 //   res.send(`Node and express server running on port ${PORT}`)
