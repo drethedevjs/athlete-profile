@@ -5,31 +5,27 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <label for="firstName" class="form-label">First Name:</label>
-            <p>{{profile.firstName}}</p>
-
-            <label for="lastName" class="form-label">Last Name:</label>
-            <p>{{profile.lastName}}</p>
-
-            <label for="dateOfBirth" class="form-label">Date of Birth:</label>
-            <p>{{profile.dateOfBirth}}</p>
-
-            <label for="gender" class="form-label">Gender:</label>
-            <p>{{profile.gender}}</p>
-            <label for="about" class="form-label">About:</label>
-            <p>{{profile.about}}</p>
-
-            <label for="sport" class="form-label">Sports:</label>
-            <ul>
-              <li ng-repeat="sport in profile.sports">{{sport}}</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col">
-            <button type="button" class="btn btn-info" ng-click="navigateTo('form-basic')">Edit Basic Section</button>
-            <button type="button" class="btn btn-info" ng-click="navigateTo('form-about')">Edit About Section</button>
-            <button type="submit" class="btn btn-success" ng-click="addProfile(profile)">Submit</button>
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="Profile Picture">
+              <div class="card-body">
+                <h5 class="card-title">{{profile.firstName}} {{profile.lastName}}</h5>
+                <p class="card-text">{{profile.about}}</p>
+              </div>
+              <div class="list-group list-group-flush">
+                <li class="list-group-item"><b>Location:</b> {{profile.location}}</li>
+                <li class="list-group-item"><b>DOB:</b> {{profile.dateOfBirth}}</li>
+                <li class="list-group-item"><b>Gender:</b> {{profile.gender}}</li>
+                <li class="list-group-item">
+                  <b>Sports:</b>
+                  <p ng-repeat="sport in profile.sports">{{sport}}</p>
+                </li>
+              </ul>
+              <div class="card-body">
+                <button type="button" class="btn btn-info ml-1" ng-click="navigateTo('form-basic')">Edit Basic Section</button>
+                <button type="button" class="btn btn-info" ng-click="navigateTo('form-about')">Edit About Section</button>
+                <button type="button" class="btn btn-success" ng-click="formSubmit(profile)">Complete</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

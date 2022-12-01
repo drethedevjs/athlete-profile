@@ -50,9 +50,9 @@
       console.log(profile);
     }
 
-    const formSubmit = () => {
-      profilesFactory.updateProfile($scope.profile).then(() => {
-        console.log("Added");
+    $scope.formSubmit = (profile) => {
+      profilesFactory.updateProfile(profile).then(() => {
+        $scope.navigateTo('','');
       })
     }
   };

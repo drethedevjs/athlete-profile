@@ -1,6 +1,7 @@
 (function() {
 
   const homeController = function($scope, profilesFactory, $location) {
+    $scope.profiles = [];
     function init() {
       profilesFactory.getProfiles().then(profiles => {
         $scope.profiles = profiles;
