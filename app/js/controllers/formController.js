@@ -45,16 +45,6 @@
         });
       }
     };
-
-    $scope.addProfile = (profile) => {
-      console.log(profile);
-    }
-
-    $scope.formSubmit = (profile) => {
-      profilesFactory.updateProfile(profile).then(() => {
-        $scope.navigateTo('','');
-      })
-    }
   };
 
   angular.module("app").controller('FormController', formController);

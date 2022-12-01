@@ -1,8 +1,8 @@
+require('dotenv').config();
 const profileRouter = require('./src/routes/profiles');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const dbConfig = process.env.NODE_ENV !== 'production' ? require('./config') : '';
 const path = require('path');
 
 const app = express();
@@ -10,7 +10,7 @@ const app = express();
 async function connect() {
   try
   {
-    await mongoose.connect(dbConfig["connectionString"] || '', { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(process.env.MONGODB_URL || '', { useNewUrlParser: true, useUnifiedTopology: true });
     console.log("Connected to database!");
   } catch (error) {
     console.log(error);
