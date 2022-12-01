@@ -1,12 +1,29 @@
-<div id="home" class="row">
+<div id="about">
   <div class="large-6 large-offset-3">
-    <h2>Profile</h2>
+    <h2>About</h2>
     <div class="mb-3">
       <div class="container">
+        <div class="row mb-3">
+          <div class="col-6">
+            <label for="about" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location" ng-model="profile.location" />
+          </div>
+          <div class="col-6">
+            <label for="about" class="form-label">Team</label>
+            <input type="text" class="form-control" id="team" ng-model="profile.team" />
+          </div>
+        </div>
         <div class="row">
-        <div class="mb-3">
-          <label for="about" class="form-label">About</label>
-          <textarea class="form-control" id="about" rows="3"></textarea>
+          <div class="mb-3">
+            <label for="about" class="form-label">About You</label>
+            <textarea class="form-control" id="about" rows="10" ng-model="profile.about"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-info" ng-click="navigateTo('form-basic')">Previous Section</button>
+            <button class="btn btn-warning" ng-click="navigateTo('form-summary')">Summary</button>
+          </div>
         </div>
       </div>
     </div>
