@@ -4,36 +4,21 @@
     <div class="mb-3">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12">
             <label for="firstName" class="form-label">First Name</label>
             <p>{{profile.firstName}}</p>
 
             <label for="lastName" class="form-label">Last Name</label>
             <p>{{profile.lastName}}</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-3">
+
             <label for="dob" class="form-label">Date of Birth</label>
-            <input type="date" class="form-control" id="dob" ng-model="profile.dob">
-          </div>
-          <div class="col-3">
+            <p>{{profile.dob}}</p>
+
             <label for="gender" class="form-label">Gender</label>
-            <select class="form-select" ng-model="profile.gender">
-              <option selected disabled>Select One</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <label for="sport" class="form-label">Sport</label>
-              <select class="form-select" id="sport" ng-model="profile.sport">
-                <option selected disabled>Select One</option>
-                <option value="Basketball">Basketball</option>
-                <option value="Football">Football</option>
-              </select>
-            </div>
+            <p>{{profile.gender}}</p>
+
+            <label for="sport" class="form-label">Sport</label>
+            <p>{{profile.sport}}</p>
           </div>
         </div>
         <div class="row mt-3">

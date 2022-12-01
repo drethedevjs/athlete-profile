@@ -64,7 +64,6 @@ router.put('/', async (req, res) => {
 
   try {
     await Profile.updateOne({ id: req.body.id }, profile);
-    // await Profile.save();
     res.status(201).json(profile);
   } catch (err) {
     res.status(400).json({ message: err.message });

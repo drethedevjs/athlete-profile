@@ -13,7 +13,7 @@ const ProfileSchema = new Schema({
   },
   sports: {
     type: Array,
-    required: true
+    required: false
   },
   gender: {
     type: String,
@@ -26,12 +26,12 @@ const ProfileSchema = new Schema({
   },
   location: {
     type: String,
-    required: true,
+    required: false,
     default: 'USA'
   },
   team: {
     type: String,
-    required: true,
+    required: false,
   },
   about: {
     type: String,
