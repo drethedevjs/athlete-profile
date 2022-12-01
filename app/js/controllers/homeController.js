@@ -10,6 +10,7 @@
     init();
 
     $scope.navigateToBasicInfoPage = () => $location.path('/form-basic');
+    $scope.viewProfile = (profileId) => $location.path(`/form-summary/${profileId}`);
   };
 
   angular.module("app").controller('HomeController', homeController);

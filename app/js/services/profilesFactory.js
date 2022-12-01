@@ -10,7 +10,7 @@
 
     factory.getProfile = function(profileId) {
       return $http.get(`http://localhost:2222/profile/${profileId}`).then(res => {
-        return res.data[0];
+        return res.data;
       });
     }
 

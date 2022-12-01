@@ -5,7 +5,7 @@
     $scope.profile = {
       firstName: "",
       lastName: "",
-      dob: "",
+      dateOfBirth: new Date(),
       gender: "",
       sport: "",
       location: "",
@@ -16,6 +16,7 @@
     if ($routeParams.id) {
       function init() {
         profilesFactory.getProfile($routeParams.id).then(profile => {
+          profile.dateOfBirth = new Date(profile.dateOfBirth);
           $scope.profile = profile;
         });
       }

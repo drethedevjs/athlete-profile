@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', (req, res) => {
   setResponseHeader(res);
-  Profile.find({_id: req.params.id}, (err, profile) => {
+  Profile.findOne({_id: req.params.id}, (err, profile) => {
     if(err) {
       res.send(err.message);
     }
@@ -47,9 +47,10 @@ router.post('/', async (req, res) => {
   }
 })
 
-router.put('/', async (req, res) => {
+router.put('/:id', async (req, res) => {
   setResponseHeader(res);
   const profile = new Profile({
+    _id: req.body._id,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     sports: req.body.sports,
@@ -63,7 +64,7 @@ router.put('/', async (req, res) => {
   });
 
   try {
-    await Profile.updateOne({ id: req.body.id }, profile);
+    await Profile.updateOne({ _id: req.body._id }, profile);
     res.status(201).json(profile);
   } catch (err) {
     res.status(400).json({ message: err.message });
