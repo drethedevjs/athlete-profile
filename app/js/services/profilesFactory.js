@@ -26,6 +26,12 @@
       });
     }
 
+    factory.deleteProfile = function(profileId) {
+      return $http.delete(`/profile/${profileId}`).then(res => {
+        return res;
+      });
+    }
+
     return factory;
   }
 

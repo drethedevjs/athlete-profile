@@ -14,8 +14,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr colspan="4" ng-show="profiles.length == 0">
-            <td>
+          <tr ng-show="profiles.length == 0">
+            <td colspan="5">
               You have no profiles created. Click the Add Profile button to get started.
             </td>
           </tr>
@@ -33,7 +33,7 @@
             <td>
               <div class="btn-group" role="group">
                 <button type="button" class="btn btn-warning" ng-click="viewProfile(profile._id)">View</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-danger" ng-click="deleteProfile(profile._id)">Delete</button>
               </div>
             </td>
           </tr>
