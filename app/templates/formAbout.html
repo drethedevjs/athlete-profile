@@ -3,24 +3,24 @@
     <h2>About</h2>
     <div class="mb-3">
       <div class="container">
-        <div class="row mb-3">
-          <div class="col-6">
+        <div class="row justify-content-center mb-3">
+          <div class="col-3">
             <label for="about" class="form-label">Location</label>
             <input type="text" class="form-control" id="location" ng-model="profile.location" />
           </div>
-          <div class="col-6">
+          <div class="col-3">
             <label for="about" class="form-label">Team</label>
             <input type="text" class="form-control" id="team" ng-model="profile.team" />
           </div>
         </div>
-        <div class="row">
-          <div class="mb-3">
+        <div class="row justify-content-center">
+          <div class="col-6 mb-3">
             <label for="about" class="form-label">About You</label>
             <textarea class="form-control" id="about" rows="10" ng-model="profile.about"></textarea>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
+        <div class="row justify-content-center">
+          <div class="col-6">
             <button class="btn btn-info" ng-click="saveProfile(profile, 'form-basic')">Previous Section</button>
             <button class="btn btn-warning" ng-click="saveProfile(profile, 'form-summary')">Summary</button>
           </div>

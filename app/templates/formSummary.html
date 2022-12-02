@@ -3,29 +3,27 @@
     <h2>Summary</h2>
     <div class="mb-3">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="Profile Picture">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <div class="card" style="width: 30rem;">
+              <img src="https://www.lightsong.net/wp-content/uploads/2020/12/blank-profile-circle.png" class="card-img-top img-thumbnail mx-auto" alt="Profile Picture">
               <div class="card-body">
                 <h5 class="card-title">{{profile.firstName}} {{profile.lastName}}</h5>
                 <p class="card-text">{{profile.about}}</p>
               </div>
-              <div class="list-group list-group-flush">
-                <li class="list-group-item"><b>Location:</b> {{profile.location}}</li>
-                <li class="list-group-item"><b>DOB:</b> {{profile.dateOfBirth}}</li>
-                <li class="list-group-item"><b>Gender:</b> {{profile.gender}}</li>
+              <div class="list-group list-group-flush text-center">
+                <li class="list-group-item"><b>Location:</b><br>{{profile.location}}</li>
+                <li class="list-group-item"><b>DOB:</b><br>{{profile.dateOfBirth}}</li>
+                <li class="list-group-item"><b>Gender:</b><br>{{profile.gender}}</li>
                 <li class="list-group-item">
-                  <b>Sports:</b>
+                  <b>Sports:</b><br>
                   <p ng-repeat="sport in profile.sports">{{sport}}</p>
                 </li>
               </ul>
               <div class="card-body">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-info ml-1" ng-click="navigateTo('form-basic')">Edit Basic Section</button>
-                  <button type="button" class="btn btn-info" ng-click="navigateTo('form-about')">Edit About Section</button>
-                  <button type="button" class="btn btn-success" ng-click="navigateTo('','')">Complete</button>
-                </div>
+                <button type="button" class="btn btn-info ml-1" ng-click="navigateTo('form-basic')">Edit Basic Section</button>
+                <button type="button" class="btn btn-info" ng-click="navigateTo('form-about')">Edit About Section</button>
+                <button type="button" class="btn btn-success" ng-click="navigateTo('','')">Complete</button>
               </div>
             </div>
           </div>

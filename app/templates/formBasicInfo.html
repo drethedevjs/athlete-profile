@@ -1,9 +1,9 @@
-<div id="home">
+<div id="basic">
   <div class="large-6 large-offset-3">
     <h2>Basic</h2>
     <div class="mb-3">
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-6">
             <label for="firstName" class="form-label">First Name</label>
             <input type="text" class="form-control" id="firstName" ng-model="profile.firstName">
@@ -12,7 +12,7 @@
             <input type="text" class="form-control" id="lastName" ng-model="profile.lastName">
           </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-3">
             <label for="dateOfBirth" class="form-label">Date of Birth</label>
             <input type="date" class="form-control" id="dateOfBirth" ng-model="profile.dateOfBirth">
@@ -25,18 +25,25 @@
               <option value="Female">Female</option>
             </select>
           </div>
-          <div class="row">
-            <div class="col-6">
-              <label for="sport" class="form-label">Sports</label>
-              <select class="form-select" id="sport" ng-model="profile.sports" multiple>
-                <option value="Basketball">Basketball</option>
-                <option value="Football">Football</option>
-              </select>
-            </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <label for="sport" class="form-label">Sports</label><br>
+            <small id="sportHelp" class="form-text text-muted">Feel free to select multiple.</small>
+            <select class="form-select" id="sport" ng-model="profile.sports" multiple>
+              <option value="Basketball">Basketball</option>
+              <option value="Football">Football</option>
+              <option value="Golf">Golf</option>
+              <option value="Tennis">Tennis</option>
+              <option value="Cricket">Cricket</option>
+              <option value="Baseball">Baseball</option>
+              <option value="American Football">American Football</option>
+              <option value="Aquatics">Aquatics</option>
+            </select>
           </div>
         </div>
-        <div class="row mt-3">
-          <div class="col">
+        <div class="row mt-3 justify-content-center">
+          <div class="col-6">
             <button class="btn btn-danger" ng-click="navigateTo('')">Back</button>
             <button class="btn btn-warning" ng-click="saveProfile(profile, 'form-about')">Next Section</button>
           </div>
