@@ -5,7 +5,7 @@ const Profile = require('../models/profileSchema');
 router.get('/', async (req, res) => {
   setResponseHeader(res);
   try {
-    const profiles = await Profile.find();
+    let profiles = await Profile.find();
     res.json(profiles);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', async (req, res) => {
   setResponseHeader(res);
-  const profile = new Profile({
+  let profile = new Profile({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     sports: req.body.sports,
@@ -49,7 +49,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   setResponseHeader(res);
-  const profile = new Profile({
+  let profile = new Profile({
     _id: req.body._id,
     firstName: req.body.firstName,
     lastName: req.body.lastName,

@@ -4,7 +4,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
-
 const app = express();
 
 async function connect() {
@@ -19,9 +18,6 @@ async function connect() {
 
 connect();
 
-app.use(express.json());
-app.use('/profile', profileRouter);
-
 const corsOptions = {
   "origin": "*",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
@@ -30,12 +26,13 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions));
-
 app.use(express.static(path.join(__dirname + '/app')));
+app.use(express.json());
+app.use('/profile', profileRouter);
+
 app.use("/", function(req, res) {
   res.sendFile(path.join(__dirname + '/app/pages/index.html'));
 });
 
-// Allows you to verify via the console that the server is up and running
 const PORT = process.env.PORT || 2222;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
