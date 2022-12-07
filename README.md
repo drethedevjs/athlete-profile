@@ -1,7 +1,8 @@
 Athlete Profile Input Form
 ===============================
-## Heroku
-View Deployed App at [Athlete Profile App](https://athleteprofileapp.herokuapp.com/)
+
+## Azure
+View Deployed App at [Athlete Profile App](https://athleteprofileapp.azurewebsites.net)
 
 ### Overview
 In this task you'll be creating and deploying a simple, full-stack, responsive, single-page application in Node and Angular 1/ AngularJS.
