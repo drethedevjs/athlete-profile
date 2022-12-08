@@ -5,7 +5,7 @@
     $scope.profile = {
       firstName: "",
       lastName: "",
-      dateOfBirth: moment(),
+      dateOfBirth: new Date(),
       gender: "",
       sport: "",
       location: "",
@@ -16,7 +16,7 @@
     if ($routeParams.id) {
       function init() {
         profilesFactory.getProfile($routeParams.id).then(profile => {
-          profile.dateOfBirth = moment(profile.dateOfBirth);
+          profile.dateOfBirth = $location.$$path.includes('form-basic') ? new Date(profile.dateOfBirth) : moment(profile.dateOfBirth).format("MM-DD-YYYY");
           $scope.profile = profile;
         });
       }
@@ -41,8 +41,9 @@
         });
       } else {
         profilesFactory.saveProfile(profile).then(profileId => {
-          $scope.navigateTo(route, profileId);
-        });
+            $scope.navigateTo(route, profileId);
+          }
+        );
       }
     };
   };

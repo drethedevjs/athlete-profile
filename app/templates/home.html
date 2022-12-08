@@ -3,9 +3,9 @@
     <h1 class="display-3 text-center">Athlete Profiles</h1>
     <div class="container">
       <button class="btn btn-success" ng-click="navigateToBasicInfoPage()">Add Profile</button>
-      <table class="table table-bordered table-striped mt-3">
+      <table class="table table-bordered table-striped table-light mt-3">
         <thead>
-          <tr>
+          <tr class="text-center">
             <th scope="col">Name</th>
             <th scope="col">Sports</th>
             <th scope="col">Team</th>
@@ -13,7 +13,7 @@
             <th scope="col" id="button-column" style="width: 10%;"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="table-group-divider">
           <tr ng-show="profiles.length == 0">
             <td colspan="5">
               You have no profiles created. Click the Add Profile button to get started.
@@ -39,7 +39,7 @@
               </div>
             </td>
           </tr>
-        </tbody>
+        </tbodyc>
       </table>
     </div>
   </div>

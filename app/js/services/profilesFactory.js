@@ -23,6 +23,9 @@
     factory.saveProfile = function(profile) {
       return $http.post('/profile', profile).then(res => {
         return res.data._id;
+      },
+      error => {
+        return error.data;
       });
     }
 
