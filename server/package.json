@@ -1,0 +1,23 @@
+{
+  "name": "athlete-profile-server",
+  "version": "1.0.0",
+  "description": "This is an express server that handles business logic and the storing of data to a mongodb database.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drethedevjs/athlete-profile.git"
+  },
+  "author": "Andre Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drethedevjs/athlete-profile/issues"
+  },
+  "homepage": "https://github.com/drethedevjs/athlete-profile#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

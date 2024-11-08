@@ -1,5 +1,5 @@
 require('dotenv').config();
-const profileRouter = require('./src/routes/profiles');
+const profileRouter = require('../src/routes/profiles');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');

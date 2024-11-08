@@ -1,11 +1,13 @@
 {
   "name": "athleteprofileform",
   "title": "Athlete Profile Form",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "Open Sponsorship Code Challenge",
+  "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build-scss": "sass ./css/index.scss ./css/styles.css"
   },
   "repository": {
     "type": "git",
@@ -19,21 +21,16 @@
   "homepage": "https://github.com/drethedevjs/athlete-profile#readme",
   "dependencies": {
     "angularjs-toaster": "^3.0.0",
+    "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "moment": "^2.29.4",
-    "mongodb": "^3.7.3",
-    "mongoose": "^6.7.5"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "nodemon": "^2.0.20"
+    "moment": "^2.29.4"
   },
   "engines": {
     "node": "16.17.0",
     "npm": "8.15.0"
+  },
+  "devDependencies": {
+    "sass": "^1.80.6"
   }
 }
