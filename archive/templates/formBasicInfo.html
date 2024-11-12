@@ -1,0 +1,64 @@
+<div id="basic">
+  <div class="large-6 large-offset-3">
+    <h1 class="display-3 text-center">Basic</h1>
+    <div class="container bg-white rounded border shadow" style="width: 50%;">
+      <form name="basic" id="basicForm">
+        <div class="row justify-content-center pt-5">
+          <div class="col-9">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" ng-minLength="3" class="form-control" id="firstName" name="firstName" ng-model="profile.firstName" required>
+            <span class="text-danger" ng-show="basic.firstName.$error.required">
+              Please provide first name.
+            </span><br>
+            
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" ng-minLength="3" class="form-control" id="lastName" name="lastName" ng-model="profile.lastName" required>
+            <span class="text-danger" ng-show="basic.lastName.$error.required">
+              Please provide last name.
+            </span><br>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-5">
+            <label for="dateOfBirth" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="dateOfBirth" ng-model="profile.dateOfBirth">
+          </div>
+          <div class="col-4">
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select" ng-model="profile.gender" required>
+              <option value="" selected disabled>Select One</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+          <div class="col-9">
+            <label for="sport" class="form-label">Sports</label><br>
+            <small id="sportHelp" class="form-text text-muted">Select all that apply.</small>
+            <select class="form-select" id="sport" ng-model="profile.sports" multiple>
+              <option value="Basketball">Basketball</option>
+              <option value="Football">Football</option>
+              <option value="Golf">Golf</option>
+              <option value="Tennis">Tennis</option>
+              <option value="Cricket">Cricket</option>
+              <option value="Baseball">Baseball</option>
+              <option value="American Football">American Football</option>
+              <option value="Aquatics">Aquatics</option>
+              <option value="Archery">Archery</option>
+              <option value="Automobile Racing">Automobile Racing</option>
+              <option value="Badminton">Badminton</option>
+              <option value="Beach Volleyball">Beach Volleyball</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mt-3 justify-content-center pb-5">
+          <div class="col-9">
+            <button class="btn btn-danger" ng-click="navigateTo('')" ng-show="profile._id == undefined">Back</button>
+            <input type="submit" class="btn btn-warning" ng-click="saveProfile(profile, 'form-about')" value="submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
