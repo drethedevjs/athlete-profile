@@ -1,10 +1,15 @@
+<script lang="ts" setup>
+import NewProfile from "./NewProfile.vue";
+</script>
+
 <script lang="ts">
-import profiles from "../data/profiles"
+import profilesData from "../data/profiles";
+import IProfile from "../classes/Profile";
 
 export default {
   data() {
     return {
-      profiles: profiles as IProfile[]
+      profiles: [...profilesData] as IProfile[]
     }
   },
   methods: {
@@ -16,6 +21,10 @@ export default {
     },
     navigateToBasicInfoPage() {
       alert("Feature not yet supported.");
+    },
+    addProfile(profile: IProfile) {
+      this.profiles.push(profile);
+      console.log("profile added!");
     }
   }
 }
@@ -72,5 +81,9 @@ export default {
         </div>
       </div>
     </div>
+  </section>
+
+  <section>
+    <NewProfile @add-profile="addProfile" />
   </section>
 </template>

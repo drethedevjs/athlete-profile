@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import Home from './components/Home.vue'
+import Home from './views/Home.vue'
+import NewProfile from './views/NewProfile.vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 </script>
