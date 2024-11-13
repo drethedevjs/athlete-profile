@@ -11,7 +11,8 @@ const profiles: Profile[] = [
     aboutMe: "A four-time NBA champion and widely regarded as one of the greatest basketball players of all time, known for his all-around game and leadership.",
     gender: "Male",
     hobbies: ["Basketball", "Philanthropy", "Music"],
-    profileImage: "https://www.example.com/images/lebron.jpg"
+    profileImage: "https://www.example.com/images/lebron.jpg",
+    dateOfBirth: new Date("1984-12-30")
   },
   {
     id: 2,
@@ -22,7 +23,8 @@ const profiles: Profile[] = [
     aboutMe: "A legendary tennis player with 23 Grand Slam singles titles, Williams is known for her powerful serve and unmatched resilience on the court.",
     gender: "Female",
     hobbies: ["Tennis", "Fashion", "Activism"],
-    profileImage: "https://www.example.com/images/serena.jpg"
+    profileImage: "https://www.example.com/images/serena.jpg",
+    dateOfBirth: new Date("1981-09-26")
   },
   {
     id: 3,
@@ -33,7 +35,8 @@ const profiles: Profile[] = [
     aboutMe: "One of the greatest footballers in history, Ronaldo is known for his incredible goal-scoring ability, athleticism, and competitive spirit.",
     gender: "Male",
     hobbies: ["Football", "Fitness", "Fashion"],
-    profileImage: "https://www.example.com/images/cristiano.jpg"
+    profileImage: "https://www.example.com/images/cristiano.jpg",
+    dateOfBirth: new Date("1985-02-05")
   },
   {
     id: 4,
@@ -44,7 +47,8 @@ const profiles: Profile[] = [
     aboutMe: "The most decorated American gymnast of all time, Biles has revolutionized the sport with her groundbreaking skills and mental toughness.",
     gender: "Female",
     hobbies: ["Gymnastics", "Reading", "Traveling"],
-    profileImage: "https://www.example.com/images/simone.jpg"
+    profileImage: "https://www.example.com/images/simone.jpg",
+    dateOfBirth: new Date("1997-03-14")
   },
   {
     id: 5,
@@ -55,7 +59,8 @@ const profiles: Profile[] = [
     aboutMe: "Considered the greatest quarterback in NFL history, Brady holds seven Super Bowl titles and numerous records for passing yards and touchdowns.",
     gender: "Male",
     hobbies: ["Football", "Golf", "Family"],
-    profileImage: "https://www.example.com/images/tom.jpg"
+    profileImage: "https://www.example.com/images/tom.jpg",
+    dateOfBirth: new Date("1977-08-03")
   },
   {
     id: 6,
@@ -66,7 +71,8 @@ const profiles: Profile[] = [
     aboutMe: "A vocal advocate for social justice and gender equality, Rapinoe is a World Cup champion and Olympic gold medalist.",
     gender: "Female",
     hobbies: ["Soccer", "Advocacy", "Reading"],
-    profileImage: "https://www.example.com/images/megan.jpg"
+    profileImage: "https://www.example.com/images/megan.jpg",
+    dateOfBirth: new Date("1985-07-05")
   },
   {
     id: 7,
@@ -77,7 +83,8 @@ const profiles: Profile[] = [
     aboutMe: "Known as the fastest man in the world, Bolt holds the world record for both the 100m and 200m sprints.",
     gender: "Male",
     hobbies: ["Track", "Music", "Parties"],
-    profileImage: "https://www.example.com/images/usain.jpg"
+    profileImage: "https://www.example.com/images/usain.jpg",
+    dateOfBirth: new Date("1986-08-21")
   },
   {
     id: 8,
@@ -88,7 +95,8 @@ const profiles: Profile[] = [
     aboutMe: "With 23 Olympic gold medals, Phelps is the most decorated Olympian in history, renowned for his dominance in freestyle and butterfly events.",
     gender: "Male",
     hobbies: ["Swimming", "Golf", "Charity Work"],
-    profileImage: "https://www.example.com/images/michael.jpg"
+    profileImage: "https://www.example.com/images/michael.jpg",
+    dateOfBirth: new Date("1985-06-30")
   },
   {
     id: 9,
@@ -99,7 +107,8 @@ const profiles: Profile[] = [
     aboutMe: "A rising star in tennis, Osaka has won multiple Grand Slam titles and is known for her poise on the court and activism off it.",
     gender: "Female",
     hobbies: ["Tennis", "Fashion", "Philanthropy"],
-    profileImage: "https://www.example.com/images/naomi.jpg"
+    profileImage: "https://www.example.com/images/naomi.jpg",
+    dateOfBirth: new Date("1997-10-16")
   },
   {
     id: 10,
@@ -110,7 +119,8 @@ const profiles: Profile[] = [
     aboutMe: "A dynamic quarterback with a unique playing style, Mahomes led the Chiefs to two Super Bowl victories and is known for his arm strength and mobility.",
     gender: "Male",
     hobbies: ["Football", "Baseball", "Family"],
-    profileImage: "https://www.example.com/images/patrick.jpg"
+    profileImage: "https://www.example.com/images/patrick.jpg",
+    dateOfBirth: new Date("1995-09-17")
   }
 ];
 

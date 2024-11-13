@@ -9,21 +9,21 @@ export interface IProfile {
   aboutMe: string,
   gender: string,
   hobbies: string[],
-  profileImage: string
+  profileImage: string,
+  dateOfBirth: Date,
 }
 
 export default class Profile implements IProfile {
   constructor(
-    public id: number,
-    public firstName: string,
-    public lastName: string,
-    public sports: Sport[],
-    public team: string,
-    public aboutMe: string,
-    public gender: string,
-    public hobbies: string[],
-    public profileImage: string
-  ) {
-
-  }
+    public id: number = 0,
+    public firstName: string = "",
+    public lastName: string = "",
+    public sports: Sport[] = [],
+    public team: string = "",
+    public aboutMe: string = "",
+    public gender: string = "",
+    public hobbies: string[] = [],
+    public profileImage: string = "",
+    public dateOfBirth: Date = new Date()
+  ) { }
 }
